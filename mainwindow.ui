@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>904</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AiNotebook</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font: 10pt &quot;Bahnschrift&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(15, 15, 15);
+}
+
+QFrame {
+	color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 10);
+	border: none;
+}
+
+QLineEdit {
+	border: 1px solid rgb(255, 192, 133);
+	border-radius: 3px;
+	color: rgb(60, 66, 92);
+	background-color: rgb(161, 204, 210);
+}
+
+QLineEdit:hover {
+	border: 2px solid rgba(255, 192, 133, 70);
+}
+
+QLineEdit:focus {
+	border: 2px solid rgb(255, 192, 133);
+}
+
+QPushButton {
+	font: 12pt &quot;Bahnschrift&quot;;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 2px;
+	color: rgb(15, 15, 15);
+	background-color: rgb(210, 210, 210);
+}
+
+QPushButton:hover {
+	font: 12pt &quot;Bahnschrift&quot;;
+	border: 2px solid rgb(255, 255, 255);
+	border-radius: 3px;
+	color: rgb(15, 15, 15);
+	background-color: rgb(220, 220, 220);
+}
+
+QPushButton:pressed {
+	font: 12pt &quot;Bahnschrift&quot;;
+	color: rgb(60, 66, 92);
+	border: 1px solid rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+}
+
+QTextEdit {
+	background-color:rgba(255, 255, 255, 10);
+	color:rgb(255, 255, 255);
+	border-style:solid;
+	border-color:rgb(255, 255, 255);
+	border-radius: 3px;
+	padding: 10px;
+}
+
+QTextEdit:focus {
+	background-color:rgba(255, 255, 255, 20);
+	color:rgb(255, 255, 255);
+	border:1px;
+	border-style:solid;
+	border-color:rgb(255, 255, 255);
+	border-radius: 3px;
+	padding: 10px;
+}
+
+QPlainTextEdit {
+	font: 10pt &quot;Bahnschrift&quot;;
+    background-color:rgba(255, 255, 255, 10);color:rgb(255, 255, 255);border-style:solid;border-color:rgb(255, 255, 255);border-radius: 3px;padding: 5px;
+}
+
+QPlainTextEdit:focus {
+	font: 10pt &quot;Bahnschrift&quot;;
+    background-color:rgba(255, 255, 255, 30);color:rgb(255, 255, 255);border:1px;border-style:solid;border-color:rgb(255, 255, 255);border-radius: 3px;padding: 5px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <item>
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Policy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton_new">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/new.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_open">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/open.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_save">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/save.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_alignleft">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/left.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_aligncenter">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/center.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_alignright">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/right.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_alignjust">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/icons/icons/justified.ico);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButton_bold">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 700 10pt &quot;Segoe UI&quot;;</string>
+            </property>
+            <property name="text">
+             <string> Ж </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_italic">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: italic 10pt &quot;Segoe UI&quot;;</string>
+            </property>
+            <property name="text">
+             <string> К </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_underline">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: underline;</string>
+            </property>
+            <property name="text">
+             <string>П</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QComboBox" name="comboBox_font">
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>Arial</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Arial Unicode MS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Artifakt Element</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bahnschrift</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Book Antiqua</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bookman Old Style</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Calibri</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cambria</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cambria Math</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Candara</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cascadia Code</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Century</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Century Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Century Schoolbook</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Comic Sans MS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Complex</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Consolas</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Constantia</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Corbel</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Courier</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Courier New</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fixedsys</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Franklin Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Franklin Gothic Book</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Gabriola</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Garamond</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GENISO</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Georgia</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GOST Common</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GothicE</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GothicG</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GothicI</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GreekC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GreekS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haettenschweiler</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Impact</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCP</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCP2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCP3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCPEUR</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCT</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCT2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCT3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ISOCTEUR</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Italic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ItalicC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ItalicT</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lucida Console</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lucida Sans Unicode</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Malgun Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft JhengHei</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft JhengHei UI</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Sans Serif</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft YaHei</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mistral</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Monotxt</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Monotype Corsiva</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS PGothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS Reference Sans Serif</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS Sans Serif</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS Serif</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MS UI Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>NSimSun</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Palatino Linotype</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proxy 9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Revit_HEB_DWG</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Revit_HEB_Key</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>RomanC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>RomanD</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>RomanS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>RomanT</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ScriptC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ScriptS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Segoe Print</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Segoe Sprint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Segoe UI</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Simplex</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SimSun</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sitka</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Small Fonts</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Syastro</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sylfaen</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Symap</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Symath</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Symeteo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Symusic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>System</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tahoma</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Times New Roman</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Trebuchet MS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Txt</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vendana</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yu Gothic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yu Gothic UI</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_size">
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>12</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>14</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>18</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>20</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_textcolor">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_AI">
+          <property name="minimumSize">
+           <size>
+            <width>176</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>176</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Выделенное в AI</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Bahnschrift'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Policy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QTextEdit" name="textEdit_AI">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Что сделать?</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>50</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_clear">
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Очистить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_gen">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Сгенерировать</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Генерация, подождите</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Policy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources>
+  <include location="res_rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

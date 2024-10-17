@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/center.ico</file>
+    <file>icons/justified.ico</file>
+    <file>icons/left.ico</file>
+    <file>icons/new.ico</file>
+    <file>icons/open.ico</file>
+    <file>icons/right.ico</file>
+    <file>icons/save.ico</file>
+  </qresource>
+</RCC>
