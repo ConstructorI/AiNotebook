@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
             self.update_button_color()
 
     def update_button_color(self):
-        img = self.create_gradient_pixmap(15, 15)
+        img = self.create_gradient_pixmap(18, 18)
         icon = QIcon(img)
         self.ui_main.pushButton_textcolor.setIcon(icon)
         self.ui_main.pushButton_textcolor.setIconSize(img.size())

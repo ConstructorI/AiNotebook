@@ -25,7 +25,11 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(904, 668)
+        MainWindow.resize(780, 710)
+        MainWindow.setBaseSize(QSize(780, 710))
+        icon = QIcon()
+        icon.addFile(u":/icons/icons/icon.ico", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QWidget {\n"
 "	font: 10pt \"Bahnschrift\";\n"
 "	color: rgb(255, 255, 255);\n"
@@ -110,7 +114,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout_8 = QHBoxLayout(self.centralwidget)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer_5)
 
@@ -144,7 +148,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addLayout(self.horizontalLayout_5)
 
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_6.addItem(self.horizontalSpacer_2)
 
@@ -363,7 +367,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addLayout(self.horizontalLayout_2)
 
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_7.addItem(self.horizontalSpacer_3)
 
@@ -379,20 +383,30 @@ class Ui_MainWindow(object):
 
         self.textEdit = QTextEdit(self.centralwidget)
         self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setStyleSheet(u"font: 12pt \"Arial\";")
+        self.textEdit.setMaximumSize(QSize(480, 16777215))
+        self.textEdit.setBaseSize(QSize(0, 0))
+        self.textEdit.setStyleSheet(u"")
 
         self.verticalLayout_2.addWidget(self.textEdit)
 
 
         self.horizontalLayout_8.addLayout(self.verticalLayout_2)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer)
 
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setSpacing(5)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label_3 = QLabel(self.centralwidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(0, 20))
+        self.label_3.setMaximumSize(QSize(300, 16777215))
+        self.label_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label_3)
+
         self.textEdit_AI = QTextEdit(self.centralwidget)
         self.textEdit_AI.setObjectName(u"textEdit_AI")
         self.textEdit_AI.setMinimumSize(QSize(0, 0))
@@ -445,7 +459,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addLayout(self.verticalLayout)
 
-        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer_4)
 
@@ -585,15 +599,16 @@ class Ui_MainWindow(object):
         self.comboBox_size.setItemText(7, QCoreApplication.translate("MainWindow", u"20", None))
 
         self.pushButton_textcolor.setText("")
-        self.pushButton_AI.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0435 \u0432 AI", None))
+        self.pushButton_AI.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0435 \u0432 \u0437\u0430\u043f\u0440\u043e\u0441", None))
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"</style></head><body style=\" font-family:'Bahnschrift'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial'; font-size:12pt;\"><br /></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043f\u0440\u043e\u0441 \u0434\u043b\u044f \u043d\u0435\u0439\u0440\u043e\u0441\u0435\u0442\u0438:", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u0427\u0442\u043e \u0441\u0434\u0435\u043b\u0430\u0442\u044c?", None))
         self.pushButton_clear.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c", None))
         self.pushButton_gen.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0433\u0435\u043d\u0435\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c", None))

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/icon.ico</file>
     <file>icons/center.ico</file>
     <file>icons/justified.ico</file>
     <file>icons/left.ico</file>
