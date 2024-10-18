@@ -19,7 +19,6 @@ class MainWindow(QMainWindow):
         self.ui_main.textEdit.setFontPointSize(12)
         self.current_color = Qt.white
         self.update_button_color()
-        self.ui_main.textEdit.setContentsMargins(50, 50, 50, 50)
         self.ui_main.comboBox_size.setCurrentIndex(3)
         self.cursor = QTextCursor()
         self.ui_main.label_2.setHidden(True)
